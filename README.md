@@ -1,12 +1,12 @@
 ## **_Website_**:[https://simple-todos-pearl.vercel.app](https://simple-todos-pearl.vercel.app)🔗
 
-In this project, let's build a **Destination Search** app by applying the concepts we have learned till now.
+In this project, let's build a **Simple Todos** app by applying the concepts we have learned till now.
 
 ### Refer to the image below:
 
 <br/>
 <div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/destination-search-output-v2.gif" alt="destination search output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
+    <img src="https://assets.ccbp.in/frontend/content/react-js/simple-todos-output.gif" alt="simple todos output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
 </div>
 <br/>
 
@@ -15,8 +15,8 @@ In this project, let's build a **Destination Search** app by applying the concep
 <details>
 <summary>Click to view</summary>
 
-- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/destination-search-sm-output-v2.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/destination-search-lg-output-v2.png)
+- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/simple-todos-sm-output-v2.png)
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/simple-todos-lg-output-v2.png)
 
 </details>
 
@@ -37,15 +37,14 @@ In this project, let's build a **Destination Search** app by applying the concep
 
 The app must have the following functionalities
 
-- Initially, all destinations in the `destinationsList` should be displayed
-- When a value is provided in the search input, only the destinations whose names contain the value provided in the search input should be displayed irrespective of the case
-- The `DestinationSearch` component receives the `destinationsList` as a prop. It consists of a list of destination objects with the following properties in each destination object
+- Initially, the list of given todos should be displayed with a delete button for each todo
+- When **Delete** button of a todo is clicked, then the respective todo should be deleted
+- The `SimpleTodos` will consist of the `initialTodosList`. It consists of a list of todo objects with the following properties in each todo object
 
-  |  Key   | Data Type |
-  | :----: | :-------: |
-  |   id   |  Number   |
-  |  name  |  String   |
-  | imgUrl |  String   |
+  |  Key  | Data Type |
+  | :---: | :-------: |
+  |  id   |  Number   |
+  | title |  String   |
 
 </details>
 
@@ -54,7 +53,7 @@ The app must have the following functionalities
 
 <br/>
 <div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/destination-search-component-structure-v2-img.png" alt="destination search component structure" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
+    <img src="https://assets.ccbp.in/frontend/content/react-js/simple-todos-component-structure.png" alt="simple todos component structure" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
 </div>
 <br/>
 
@@ -66,50 +65,47 @@ The app must have the following functionalities
 
 Use these files to complete the implementation:
 
-- `src/components/DestinationSearch/index.js`
-- `src/components/DestinationSearch/index.css`
-- `src/components/DestinationItem/index.js`
-- `src/components/DestinationItem/index.css`
+- `src/components/SimpleTodo/index.js`
+- `src/components/SimpleTodo/index.css`
+- `src/components/TodoItem/index.js`
+- `src/components/TodoItem/index.css`
 </details>
 
-### Important Note
+### Quick Tips
 
 <details>
 <summary>Click to view</summary>
+<br>
 
-<br/>
+- You can use the `cursor` CSS property to specify the mouse cursor to be displayed when pointing over an element
 
-**The following instructions are required for the tests to pass**
-
-- The search for the destination should be case insensitive. You can use the `toLowerCase` method to convert a string into lower case letters.
-
-  ```js
-  const text = 'Learn JavaScript'
-  console.log(text.toLowerCase()); // learn javascript
+  ```
+    cursor: pointer;
   ```
 
-- Each `DestinationItem` should have an HTML image element with `alt` attribute value as the value of the key **name** in `destinationsList`
+  <br/>
+   <img src="https://assets.ccbp.in/frontend/content/react-js/cursor-pointer-img.png" alt="cursor pointer" style="width:100px" />
+
+- You can use the below `outline` CSS property for buttons and input elements to remove the highlighting when the elements are clicked
+
+  ```
+    outline: none;
+  ```
 
 </details>
 
 ### Resources
 
 <details>
-<summary>Image URLs</summary>
-
-- [https://assets.ccbp.in/frontend/react-js/destinations-search-icon-img.png](https://assets.ccbp.in/frontend/react-js/destinations-search-icon-img.png) alt should be **search icon**
-
-</details>
-
-<details>
 <summary>Colors</summary>
 
 <br/>
 
-<div style="background-color: #252627; width: 150px; padding: 10px; color: white">Hex: #252627</div>
-<div style="background-color: #0f172a; width: 150px; padding: 10px; color: white">Hex: #0f172a</div>
-<div style="background-color: #f1f5f9; width: 150px; padding: 10px; color: black">Hex: #f1f5f9</div>
+<div style="background-color: #ffc2a0; width: 150px; padding: 10px; color: black">Hex: #ffc2a0</div>
+<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
+<div style="background-color: #ff8542; width: 150px; padding: 10px; color: white">Hex: #ff8542</div>
 <div style="background-color: #000000; width: 150px; padding: 10px; color: white">Hex: #000000</div>
+<div style="background-color: #ff0b37; width: 150px; padding: 10px; color: white">Hex: #ff0b37</div>
 
 </details>
 
@@ -117,7 +113,6 @@ Use these files to complete the implementation:
 <summary>Font-families</summary>
 
 - Roboto
-- Open Sans
 
 </details>
 
