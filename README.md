@@ -1,4 +1,4 @@
-## **_Website_**:[https://destination-search-pi.vercel.app/](https://destination-search-pi.vercel.app/)🔗
+## **_Website_**:[https://simple-todos-pearl.vercel.app](https://simple-todos-pearl.vercel.app)🔗
 
 In this project, let's build a **Destination Search** app by applying the concepts we have learned till now.
 
